@@ -1,10 +1,13 @@
 # DeepChem_Datasets_quick_practice
 
 ## Start with some simple imports
+```
 >>> import deepchem as dc
 >>> import numpy as np
+```
 
 ## construct some simple NumPy arrays
+```
 >>> x = np.random.random((4,5))
 >>> y = np.random.random((4,1))
 
@@ -19,9 +22,10 @@ array([[0.58474858],
        [0.38040572],
        [0.59258405],
        [0.79761309]])
+```
 
 ## Wrap these arrays in a NumpyDataset object
-
+```
 >>> dataset = dc.data.NumpyDataset(x,y)
 
 
@@ -36,10 +40,11 @@ array([[0.58474858],
  [0.38040572]
  [0.59258405]
  [0.79761309]]
-
+```
 ## Check if these arrays are the same as the original arrays x and y
-
+```
 >>> np.array_equal(x, dataset.X)
 True
 >>> np.array_equal(y, dataset.y)
 True
+```
